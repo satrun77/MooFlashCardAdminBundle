@@ -1,0 +1,24 @@
+services:
+    sonata.admin.category:
+        class: Moo\FlashCardAdminBundle\Admin\CategoryAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "FlashCard", label: "Category" }
+        arguments:
+            - ~
+            - Moo\FlashCardBundle\Entity\Category
+            - ~
+        calls:
+            - [ setTranslationDomain, [MooFlashCardAdminBundle]]
+    sonata.admin.card:
+        class: Moo\FlashCardAdminBundle\Admin\CardAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "FlashCard", label: "Card" }
+        arguments:
+            - ~
+            - Moo\FlashCardBundle\Entity\Card
+            - ~
+        calls:
+            - [ setTranslationDomain, [MooFlashCardAdminBundle]]
+
+assetic:
+    bundles:        ['MooFlashCardAdminBundle']

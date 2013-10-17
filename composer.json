@@ -1,0 +1,24 @@
+{
+    "name": "moo/flashcardadmin-bundle",
+    "type": "symfony-bundle",
+    "description": "Symfony bundle that provides admin classes that be used with SonataAdminBundle.",
+    "keywords": ["flash card", "knowledgebase", "SonataAdminBundle", "Admin"],
+    "homepage": "https://github.com/satrun77/FlashCardAdminBundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mohamed Alsharaf",
+            "email": "mohamed.alsharaf@gmail.com",
+            "homepage": "http://jamandcheese-on-phptoast.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.2",
+        "symfony/framework-bundle": "~2.1"
+    },
+    "autoload": {
+        "psr-0": {"Moo\\FlashCardAdminBundle": ""}
+    },
+    "target-dir": "Moo/FlashCardAdminBundle"
+}

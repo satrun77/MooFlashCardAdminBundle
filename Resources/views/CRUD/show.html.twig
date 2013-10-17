@@ -1,0 +1,14 @@
+{% set card = object %}
+{% extends 'MooFlashCardBundle:Default:view.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {% stylesheets  "@MooFlashCardAdminBundle/Resources/public/css/*"  output='css/fc_admin.css' %}
+        <link rel="stylesheet" media="all" type="text/css" href="{{ asset_url }}"/>
+    {% endstylesheets %}
+{% endblock %}
+
+{% block body %}
+    {{ parent() }}
+    <a href="{{ path('admin_moo_flashcard_card_list') }}" class="btn btn-default">{{ 'return_to_list'|trans({}) }}</a>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% set card = object %}
+{% extends 'MooFlashCardBundle:Default:view.html.twig' %}
+
+{% use 'SonataAdminBundle:CRUD:base_edit_form.html.twig' with form as parentForm %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {% stylesheets  "@MooFlashCardAdminBundle/Resources/public/css/*"  output='css/fc_admin.css' %}
+        <link rel="stylesheet" media="all" type="text/css" href="{{ asset_url }}"/>
+    {% endstylesheets %}
+{% endblock %}
+
+{% block body %}
+    {{ parent() }}
+
+    <div class="sonata-preview-form">
+        {{ block('parentForm') }}
+    </div>
+
+{% endblock %}
+
+{% block formactions %}
+    <input class="btn btn-success" type="submit" name="btn_preview_approve" value="{{ 'btn_preview_approve'|trans({}, 'SonataAdminBundle') }}"/>
+    <input class="btn btn-danger" type="submit" name="btn_preview_decline" value="{{ 'btn_preview_decline'|trans({}, 'SonataAdminBundle') }}"/>
+{% endblock %}
