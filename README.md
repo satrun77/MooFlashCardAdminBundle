@@ -1,5 +1,6 @@
 FlashCardAdminBundle
 =============
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/20c13a16-4681-4187-9f3d-85cfff360414/mini.png)](https://insight.sensiolabs.com/projects/20c13a16-4681-4187-9f3d-85cfff360414)
 
 The FlashCardAdminBundle is a Symfony2 bundle that provides admin classes that be used with SonataAdminBundle.
 
