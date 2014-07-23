@@ -58,7 +58,7 @@ class CardAdmin extends Admin
                 ->add('category', 'entity', array(
                     'class' => 'Moo\FlashCardBundle\Entity\Category'
                 ))
-                ->add('isActive')
+                ->add('active')
                 ->add('content', 'textarea')
                 ->with('SEO')
                 ->add('metaKeywords', 'text', array(
@@ -87,7 +87,7 @@ class CardAdmin extends Admin
                     'field_type' => 'text'
                 ))
                 ->add('category')
-                ->add('isActive')
+                ->add('active')
         ;
     }
 
@@ -102,7 +102,7 @@ class CardAdmin extends Admin
         $listMapper
                 ->addIdentifier('title')
                 ->add('category')
-                ->add('isActive', null, array('editable' => true))
+                ->add('active', null, array('editable' => true))
                 // add custom action links
                 ->add('_action', 'actions', array(
                     'actions' => array(

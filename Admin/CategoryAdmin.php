@@ -36,7 +36,7 @@ class CategoryAdmin extends Admin
                 ->with('General')
                 ->add('title', 'text', array('label' => 'Category Title'))
                 ->add('parent', 'entity', array('class' => 'Moo\FlashCardBundle\Entity\Category', 'required' => false))
-                ->add('isActive')
+                ->add('active')
                 ->add('description', 'textarea', array('label' => 'Description'))
                 ->with('Management')
                 ->add('created', null, array('required' => false))
@@ -59,7 +59,7 @@ class CategoryAdmin extends Admin
                     'field_type' => 'text'
                 ))
                 ->add('parent')
-                ->add('isActive')
+                ->add('active')
         ;
     }
 
@@ -74,7 +74,7 @@ class CategoryAdmin extends Admin
         $listMapper
                 ->addIdentifier('title')
                 ->add('parent')
-                ->add('isActive', null, array('editable' => true))
+                ->add('active', null, array('editable' => true))
                 // add custom action links
                 ->add('_action', 'actions', array(
                     'actions' => array(
