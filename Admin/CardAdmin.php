@@ -60,12 +60,14 @@ class CardAdmin extends Admin
                 ))
                 ->add('active')
                 ->add('content', 'textarea')
+                ->end()
                 ->with('SEO')
                 ->add('metaKeywords', 'text', array(
                     'required' => false,
                     'help'     => 'Card keywords seperated by a comma.'
                 ))
                 ->add('metaDescription', 'textarea', array('required' => false))
+                ->end()
                 ->with('Management')
                 ->add('created', null, array('required' => false))
                 ->add('updated', null, array('required' => false))
