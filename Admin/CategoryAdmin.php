@@ -38,6 +38,7 @@ class CategoryAdmin extends Admin
                 ->add('parent', 'entity', array('class' => 'Moo\FlashCardBundle\Entity\Category', 'required' => false))
                 ->add('active')
                 ->add('description', 'textarea', array('label' => 'Description'))
+                ->end()
                 ->with('Management')
                 ->add('created', null, array('required' => false))
                 ->add('updated', null, array('required' => false))
